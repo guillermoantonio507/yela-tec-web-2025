@@ -2,49 +2,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YELA TEC</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h1>YELA TEC</h1>
+  <p>Bienvenidos a YELA TEC</p>
+  <p>Abajo en el menú:</p>
+  <div class="menu">
+    <button onclick="mostrarLogin()">🔑 Docente</button>
+    <button onclick="alert('Hola estudiante 👦👧, tu modo está en desarrollo.')">📘 Estudiante</button>
+  </div>
 
-  <header>
-    <h1 class="logo-3d">YELA TEC</h1>
-  </header>
-
-  <nav class="menu">
-    <button onclick="mostrarLogin()">👨‍🏫 Docente</button>
-    <button onclick="modoEstudiante()">🧒 Estudiante</button>
-    <button onclick="cambiarIdioma()">🌐 Cambiar idioma</button>
-    <button onclick="activarMicrofono()">🎤 Micrófono</button>
-    <button onclick="mostrarEntradaTexto()">⌨️ Texto</button>
-  </nav>
-
-  <section id="login" style="display:none;">
-    <h2>🔐 Acceso Docente</h2>
-    <input type="password" id="clave" placeholder="Clave secreta" autocomplete="off" />
+  <div id="login" class="contenedor-login" style="display: none;">
+    <h2>🔒 Acceso Docente</h2>
+    <input type="password" id="clave" placeholder="Ingresa tu clave secreta">
     <button onclick="verificarClave()">Entrar</button>
-  </section>
-
-  <section id="entradaTexto" style="display:none;">
-    <h2>✍️ Entrada de texto</h2>
-    <textarea id="textoEntrada" rows="4" cols="50" placeholder="Escribe aquí..."></textarea>
-    <button onclick="procesarTexto()">Enviar</button>
-  </section>
-
-  <section id="panelDocente" style="display:none;">
-    <h2>🎓 Panel Docente</h2>
-    <p>Bienvenido al panel exclusivo para docentes.</p>
-    <p id="resultadoVoz">🎧 Esperando entrada de voz...</p>
-  </section>
-
-  <section id="modoEstudiante" style="display:none;">
-    <h2>🧒 Modo Estudiante</h2>
-    <p>Funcionalidad en desarrollo, pronto para ti.</p>
-  </section>
+  </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>
