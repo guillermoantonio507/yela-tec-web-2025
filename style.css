@@ -1,32 +1,161 @@
 
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background: linear-gradient(180deg, #1a0a0a 0%, #3d0000 100%);
+  color: #fff;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-  color: #2c3e50;
+/* Logo 3D rubí traslúcido con chips, borde dorado y sombra */
+.logo-3d {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(178, 34, 34, 0.8); /* Rojo rubí translúcido */
+  position: relative;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  text-shadow:
+    0 0 15px rgba(178,34,34,0.7),
+    0 0 20px rgba(255,215,0,0.8), /* dorado */
+    1px 1px 3px rgba(0,0,0,0.8),
+    -1px -1px 5px rgba(255, 215, 0, 0.6);
+  -webkit-text-stroke: 1.5px gold; /* borde dorado suave */
+  user-select: none;
+  filter:
+    drop-shadow(0 0 5px gold)
+    drop-shadow(0 0 15px rgba(178, 34, 34, 0.6));
+  /* Pseudo elementos para chips y circuitos (simplificados) */
 }
 
-button {
-  font-size: 18px;
-  margin: 10px;
-  padding: 10px 20px;
+.logo-3d::before,
+.logo-3d::after {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  background: linear-gradient(45deg, #c02c2c, #f0c22a);
+  opacity: 0.3;
+  box-shadow: 0 0 6px rgba(255,215,0,0.6);
+  filter: blur(1.2px);
+}
+
+.logo-3d::before {
+  width: 8px;
+  height: 20px;
+  top: 10px;
+  left: 20%;
+  transform: rotate(15deg);
+}
+
+.logo-3d::after {
+  width: 12px;
+  height: 25px;
+  top: 30px;
+  left: 70%;
+  transform: rotate(-10deg);
+}
+
+/* Menú moderno */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.menu button {
+  background: linear-gradient(145deg, #5c1c1c, #a12626);
+  border: 2px solid gold;
+  color: gold;
+  padding: 15px 25px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 15px;
   cursor: pointer;
-  background-color: #3498db;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 6px rgba(178, 34, 34, 0.6),
+    inset 0 0 8px rgba(255,215,0,0.8);
+}
+
+.menu button:hover {
+  background: linear-gradient(145deg, #a12626, #ff3838);
+  box-shadow:
+    0 8px 12px rgba(255,69,0,0.8),
+    inset 0 0 12px rgba(255,215,0,1);
   color: white;
-  border: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transform: scale(1.1);
 }
 
-button:hover {
-  background-color: #2980b9;
-}
-
-#login {
+/* Secciones ocultas iniciales */
+section {
   display: none;
-  margin-top: 20px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 15px rgba(255,215,0,0.3);
+  color: gold;
+  font-weight: 600;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+/* Texto y textarea */
+#entradaTexto textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px gold;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+#entradaTexto button {
+  margin-top: 10px;
+}
+
+/* Inputs de clave */
+input[type="password"] {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  border: 2px solid gold;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  user-select: text;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .logo-3d {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
