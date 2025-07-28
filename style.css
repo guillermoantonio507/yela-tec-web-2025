@@ -1,46 +1,60 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #f0f4c3);
-  color: #333;
+  background: linear-gradient(to right, #d0f0ff, #f9fcff);
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  padding: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 40px 20px;
 }
 
 h1 {
-  font-size: 2.5em;
-  color: #004d40;
+  font-size: 3em;
+  color: #007ACC;
 }
 
-.menu button, .contenedor-login button {
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.botones button {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 15px 25px;
   font-size: 1em;
   border: none;
-  border-radius: 10px;
-  background-color: #00796b;
+  border-radius: 12px;
+  background-color: #007ACC;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
-.menu button:hover, .contenedor-login button:hover {
-  background-color: #004d40;
+.botones button:hover {
+  background-color: #005c99;
 }
 
-.contenedor-login {
-  margin-top: 20px;
-  background-color: #ffffffdd;
-  padding: 20px;
-  display: inline-block;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-input[type="password"] {
+.login input {
   padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
   width: 200px;
-  margin-bottom: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.login button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
 }
