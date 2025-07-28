@@ -3,23 +3,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YELA TEC</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>YELA TEC</h1>
-  <p>Bienvenidos a YELA TEC</p>
-  <p>Abajo en el menú:</p>
-  <div class="menu">
-    <button onclick="mostrarLogin()">🔑 Docente</button>
-    <button onclick="alert('Hola estudiante 👦👧, tu modo está en desarrollo.')">📘 Estudiante</button>
-  </div>
-
-  <div id="login" class="contenedor-login" style="display: none;">
-    <h2>🔒 Acceso Docente</h2>
-    <input type="password" id="clave" placeholder="Ingresa tu clave secreta">
-    <button onclick="verificarClave()">Entrar</button>
+  <div class="container">
+    <h1>🌎 YELA TEC 2025</h1>
+    <p>Educación ecológica y tecnológica para niños</p>
+    <div class="botones">
+      <button onclick="redirigirEstudiante()">👧 Estudiante</button>
+      <button onclick="mostrarLogin()">👨‍🏫 Docente</button>
+    </div>
+    <div id="login" class="login" style="display:none;">
+      <input type="password" id="clave" placeholder="Ingrese la clave de docente">
+      <button onclick="verificarClave()">Entrar</button>
+      <p id="error" class="error"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
